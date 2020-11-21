@@ -1,0 +1,139 @@
+/*Body Styling*/
+
+body{
+    background-color:#f3f3f3;
+}
+
+#title{
+    background-color:#c70039;
+}
+/*Navigation bar */
+
+.navbar{
+    padding: 7% 7%;
+}
+
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-size:1.2rem;
+    font-family: "Montserrat";
+}
+
+/* All Heading and Paragraph*/
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family:"Montserrat";
+    font-weight: bold;
+}
+
+/*Information portion*/
+
+.total{
+
+    width:50%;
+    float: left;
+}
+
+/*News update (Count World wide)*/
+
+.News{
+    color: ghostwhite;
+    padding: 7% 15%;
+}
+
+/* Title-Image*/
+.title-img
+{
+    padding: 7% 0%;
+    width:70%;
+    height:75%;
+    margin-left: 50px;
+}
+
+/*Button*/
+
+.download-button{
+    margin-left:110px;
+    margin-bottom: 50px;
+}
+
+.link
+{
+    color: ghostwhite;
+    font-family: "Ubuntu";
+
+}
+
+/*Precaution Section*/
+
+#features{
+    padding: 7% 15%;
+    background-color:grey;
+    position: relative;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+.icon{
+    color:#394989;
+    margin-bottom: 1rem;
+}
+
+.icon:hover{
+    color:#ff4c68 ;
+}
+
+.Rules
+{
+    color: ghostwhite;
+}
+
+/*General Question*/
+
+.heading
+{
+    text-align: center;
+    font-family:"Ubuntu";
+    padding-bottom:50px;
+}
+
+/*Precation Section */
+
+#precaution{
+    text-align: left;
+    background-color:powderblue;
+}
+
+/*Containers Section*/
+
+.bottom-division
+{
+    background-color:#f3c623;
+    text-align: center;
+    font-family: "Montserrat";
+    padding:1% 15%;
+}
+
+.copyrights{
+    margin-bottom: 0px;
+    font-family:"Montserrat";
+    font-weight: bold;
+    color: ghostwhite;
+}
+
+.footer-link
+{
+    margin-right:20px;
+}

@@ -1,0 +1,36 @@
+/*Heading*/
+
+h1.h2,h3,h4,h5,h6,p
+{
+
+    font-family: "Ubuntu";
+    font-weight: bold;
+}
+
+
+/*Containers*/
+
+.bottom-container
+{
+    background-color:#f3c623;
+    text-align: center;
+    font-family: "Montserrat";
+    padding:1% 15%;
+}
+
+.footer-link
+{
+    margin:20px;
+}
+
+.social-icon
+{
+    padding-bottom:15px;
+}
+
+
+.copyrights{
+    color: ghostwhite;
+    font-family: "Ubuntu";
+    font-size: 1.1rem;
+}

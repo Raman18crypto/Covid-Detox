@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Covid19-Prediction</title>
+
+  <!---Style Reference Sheet---->
+
+  <link rel="stylesheet" href="Css/style.css">
+
+  <!----Fonts (From fonts.google.com)--->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+  <!---Favicon website logo--->
+
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+  <!---Boot-Strap-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!--Icon link -->
+
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAJz5vAJPY2AAzPWMATKaxAE+IjgC6s94AO05XAJfl7QA3PIQAEiwyAEV1cQAqPkMANjQ3AF6orgB6gKsALEFDACtndQAZODsAYWF9ABkpVgCHvMUAHl1hAECvuwBFMkwAn8niABAiJwA0NnwANSI4AEqOmABjyM8ARXN1AGtrkgAnZnMAdHN9AFF6gQBcc3UAMC+MALC24ABEaWoAO5afAB40XQA3PH0AlsHDAElucABJOWIAl4m+AD48hgBmp60AkMjqAHp2fgAWOUAAQTNIAGqlywA8RUgATYiIAFemqwBSg4sAQkhRAB9HRgBgeosAFC4yABgXUAAUMDgAQqGvAE9MVAC1qdYAJCFKABg5QQB2pqsAVE1pADRykAAoOkQAhHmaAD16hABTYnsAZGmqADIpYgBiq7IAk8HpAEyfoQAlG0IApvHxAB0adQATSUUAREBEAFBtpQARSEsAa7q7AFikpwBpsc0AGiB+AFJGiwAsI1oAg8/VAAcKGgBPZHkAOX+CACdpbgA6MjYARUJ3AE1TYgBfk5kAcW6xACo0NABOdaMAXY3GABxKQAAuW2AAJB55AC87QABbWHEAWICgAKuk0wBCSG8AQlhXAGCutAB3w8UALkhMAIzZ4gBelpoAdc7UAGt/pgCH4vQAr+rwAEc6RgA6bnUARzZMAFxepwAGGFcAMDMyAC5UZwAqNz4ARpeeAJjf/QARU2UAJC50ACZKSgAxL24AIi8wACcaSwAjMjkAK1NcACZaXwBBQqYAPjdrAGKWrQApIGYAf7OyABpPUQAkPlQAKSZvAE6SmQA0hIsAInN0AFNscAAJO0MARzx6AFZSlwBna6sAZaywAA0kagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghBiPQA3AAAAAAAAAABjAh1onHk/EpUAAAAAAAAjiw2FRX+DfSx1BaAAAAAAGigHNFocF19wMkhXAAAAlG5zkpZGQ09RExl2mhEAABaYQRhAgYxJPjFpLScfAAAAXpuIXZORexRNZCl0DAAADmYiCQNbQqFxkAYbjh58AAgwbyqHJS5TimqGXGtVAABZBIl6nZ9yRy9nIEt3YQAAAACZZWBWlzVtASY2OwAAAABYTitUD4BMnjwLRFAAAAAAAABKOTgzeCSNbACEAAAAAAAAjwAACn4hUhUAAAAAAAAAAAAAAAA6AAAAAAAAAP//AAD4XwAA4A8AAMADAADAAwAAgAEAAIABAADAAQAAgAAAAIABAACAAQAA4AMAAMADAADwCwAA9g8AAP9/AAA="
+    rel="icon" type="image/x-icon" />
+
+  <!--Logo Design Link-->
+
+  <script src="https://kit.fontawesome.com/d4121f56b5.js" crossorigin="anonymous"></script>
+
+  <!--Boot-Strap link (Hamburger-Menu)-->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+    integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!--Main heading-->
+
+  <div class="main-heading">
+
+    <h1 style="margin-bottom: 0px;">
+
+      <i class="fas fa-user-md"></i>
+
+      Immunity Based Personalized Prediction of COVID 19
+
+    </h1>
+
+  </div>
+
+  <div class="navbar navbar-expand-lg navbar-dark bg-danger navigation">
+
+    <a class="logo navbar-brand"> <i class="fas fa-jedi"></i> Covid Detox</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto item">
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="index.html">Home</a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="Pandemic.html">Pandemic-Map</a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="contact.html">Contact</a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="#">Download</a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <form action="data.php" method="POST">
+
+    <div class="middle-container">
+
+      <h2>
+
+        <label>Enter your age</label>
+
+      </h2>
+
+      <input class="Radio-buttons" type="number" name="Your_Age" placeholder="Age" required>
+
+
+      <h2>
+
+        <label>Pick your gender</label>
+
+      </h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Gender" value="2" required>Male<br>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Gender" value="1" required>Female</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+
+      <h2>Do You Have Any of these HealthConditions ?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Heart Disease</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Asthma</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Kidney Disease</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Diabities</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Cancer</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Pregnancy</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="HealthConditions" value="100" required>Yes</input>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <input type="radio" name="HealthConditions" value="5" required>No</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <h2>Do You Have Any of these highimpact symptoms ?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Fever</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Cough</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Shortness of breath</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Muscle pain</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="highimpact" value="20" required>Yes</input>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="highimpact" required value="1">No</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+
+      <h2>Do You Have Any of these lowimpact symptoms ?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Head Ache</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Sore Throat</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+        <tr>
+
+          <td>
+
+            <li class="Disease">Chest Pain</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+        <tr>
+
+          <td>
+
+            <li class="Disease">Loss of Taste or Smell</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Vomiting</li>
+
+          </td>
+
+        </tr>
+
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="lowimpact" value="10" required>Yes</input>
+
+          </td>
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="lowimpact" value="1" required>No</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+
+      <h2>Are You Following These Guidelines Consistently ?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Frequent Hand wash with soap for at least 20 Seconds</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Wearing Mask</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Social Distancing</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Self Quarantine, if unwell</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Guidelines" value="0" required>Yes</input>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Guidelines" value="10" required>No</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+
+      <h2>Have You Had Any of These Exposures in Last 4 Days:</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Travelled to Containment Zone</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Living in Containment Zone</li>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <li class="Disease">Face to Face Contact with a Confirmed Case of COVID19 for more than 15 Minutes</li>
+
+          </td>
+
+
+        </tr>
+
+      </table>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Exposures_area" value="1" required>Yes</input>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Exposures_area" value="0" required>No</input>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <h2>Have You Got an Abnormal Chest X-Ray in last 5 Days?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="XRay" value="1" required>Yes<br>
+
+            <input class="Radio-buttons" type="radio" name="XRay" value="0" required>No<br>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <h2>Do you Smoke ?</h2>
+
+      <table>
+
+        <tr>
+
+          <td>
+
+            <input class="Radio-buttons" type="radio" name="Smoke" value="5" required>Yes<br>
+
+            <input class="Radio-buttons" type="radio" name="Smoke" value="1" required>No<br>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <input class="btn btn-outline-primary btn-lg" name="Submit" style="width: 150px;" type="Submit" value="Submit">
+
+  </form>
+
+  </div>
+
+  <div class="bottom-container">
+
+    <a class="footer-link">
+
+      <i class=" social-icon fab fa-facebook"></i>
+
+    </a>
+
+    <a class="footer-link">
+
+      <i class="fab fa-twitter-square"></i>
+
+    </a>
+
+    <a class="footer-link">
+
+      <i class="social-icon fab fa-linkedin"></i>
+
+    </a>
+
+    <p class="copyrights">© 2020 Reva-University</p>
+
+  </div>
+
+
+
+</body>
+
+</html>

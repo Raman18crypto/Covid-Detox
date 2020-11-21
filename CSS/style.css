@@ -1,0 +1,90 @@
+/*Question(Headers)*/
+
+h2
+{
+    font-family: "Source Sans Pro";
+}
+
+
+/*Containers*/
+
+.middle-container
+{
+    background-image:url('Images/1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.bottom-container
+{
+    background-color:#f3c623;
+    text-align: center;
+    font-family: "Montserrat";
+    padding:1% 15%;
+}
+
+.copyrights{
+    margin-bottom: 0px;
+    font-family:"Montserrat";
+    font-weight: bold;
+    color: ghostwhite;
+}
+
+.footer-link
+{
+    margin:20px;
+}
+
+.social-icon
+{
+    padding-bottom:15px;
+}
+
+/*Table list Symptoms*/
+
+.Disease
+{
+    font-family:"Montserrat" ;
+    font-weight: bold;
+}
+
+.Radio-buttons
+{
+    font-family:"Montserrat" ;
+    font-weight: bold;
+}
+
+/*Main heading*/
+
+.main-heading
+{
+
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-weight: bold;
+    color:#febf63;
+    background-color:#f4f4f4;
+    padding: 7% 15%;
+}
+
+/*Navigation-Bar*/
+
+.navigation{
+    padding: 7% 10%;
+}
+
+.navbar-brand{
+    font-family: "Source Sans Pro";
+    font-size:4rem;
+    font-weight: bold;
+}
+
+.nav-item{
+    padding: 0 8px;
+}
+
+.nav-link{
+    font-size:1.2rem;
+    font-family: "Montserrat";
+}
+

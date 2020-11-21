@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pandemic-source</title>
+
+  <!--Fonts link-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+  <!--Boot-strap link-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!--Style-Sheet link-->
+
+  <link rel="stylesheet" href="Css/Reva.css">
+
+  <!--Favicon link (logo generator)-->
+
+  <link rel="icon" href="Images/favicon.ico">
+
+  <!--Logo Design Link-->
+
+  <script src="https://kit.fontawesome.com/d4121f56b5.js" crossorigin="anonymous"></script>
+
+  <!--Boot-strap script link-->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <section id="title">
+
+    <div class="conatiner-fluid">
+
+      <div class="navbar navbar-expand-lg navbar-dark bg-#c70039">
+
+        <a class="navbar-brand"> <i class="fas fa-jedi"></i> Covid Detox</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="symptoms.html">Symptoms</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="contact.html">Contact</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="#">Download</a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          <h4 class="News">
+
+            Corona are a large family of viruses that cause illness ranging from the common cold to more severe disease
+            such
+            as MERS-CoV and SARS-CoV.
+
+          </h4>
+
+          <h4 class="News">
+
+            Globally, as of 7:58am CEST, 8 July 2020, there have been 11,591,595 confirmed cases of COVID-19, including
+            537,859 deaths, reported to WHO.
+
+          </h4>
+
+          <a class="btn btn-primary btn-lg download-button " href="https://www.mygov.in/covid-19" role="button">
+
+            Read-More
+
+          </a>
+
+
+        </div>
+
+        <div class="col-lg-6 col-md col-sm">
+
+          <img class="title-img" src="CSS/Images/mask.png" alt="mask-img">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Precation Section-->
+
+  <section id="features">
+
+    <div class="row">
+
+      <div class="feature-box col-lg-4">
+
+        <i class="icon fas fa-bacteria fa-4x"></i>
+
+        <h3 class="Rules">Pandemic</h3>
+
+        <p class="Rules">Stay Home, Stay Safe.</p>
+
+      </div>
+
+      <div class="feature-box col-lg-4 ">
+
+        <i class="icon fas fa-people-arrows fa-4x"></i>
+
+        <h3 class="Rules">Social-Distancing</h3>
+
+        <p class="Rules">Is a must to stay safe from the virus.</p>
+
+      </div>
+
+      <div class="feature-box col-lg-4">
+
+        <i class="icon fas fa-head-side-mask fa-4x"></i>
+
+        <h3 class="Rules">Wearing-Mask.</h3>
+
+        <p class="Rules">Protect every-one from spreading the virus.</p>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <!--Map (java script)-->
+
+  <div>
+
+    <div id="regions_div"></div>
+
+  </div>
+
+  <!--Google api link (Map)-->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD7HZfN41I27oea7cFJFM6KoyLmbXxgKo&callback=initMap"
+    type="text/javascript">
+
+    </script>
+
+
+  <script type="text/javascript">
+
+    google.charts.load('current',
+      {
+
+        'packages': ['geochart'],
+
+        'mapsApiKey': 'AIzaSyAD7HZfN41I27oea7cFJFM6KoyLmbXxgKo'
+
+      });
+
+    //Data Display of current count of the countries
+
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+
+      var data = google.visualization.arrayToDataTable([
+
+        ['Country', 'Infection'],
+
+        ['Europe', 2728059],
+
+        ['United States', 5317792],
+
+        ['Eastern Mediterranean', 1096565],
+
+        ['South-East Asia', 833735],
+
+        ['Africa', 318432],
+
+        ['Western Pacific', 218704],
+
+        ['Brazil', 1403041],
+
+        ['Russia', 654405],
+
+        ['India', 604641],
+
+        ['United Kingdom', 312658],
+
+        ['Peru', 285213],
+
+        ['Chile', 282043],
+
+        ['Spain', 249271],
+
+        ['Italy', 240578],
+
+        ['Iran', 230211],
+
+        ['Mexico', 226089],
+
+        ['Pakistan', 217809],
+
+        ['France', 19615],
+
+        ['Korea', 9037],
+
+        ['Switzerland', 8015],
+
+        ['China', 85263],
+
+        ['kazakhstan', 41065],
+
+        ['Ukraine', 44998],
+
+        ['Turky', 199906],
+
+        ['VietNamm', 355],
+
+        ['Australia', 7920],
+
+        ['Canada', 104204],
+
+        ['Greenland', 13],
+
+        ['Japan', 18874],
+
+        ['Philippines', 38511],
+
+        ['Indonesia', 56385],
+
+        ['Thailand', 3173],
+
+        ['Malaysia', 8640],
+
+        ['Cambodia', 141],
+
+        ['Myanmar', 304],
+
+        ['Bangladesh', 304],
+
+        ['Nigeria', 304],
+
+        ['Niger', 304],
+
+        ['Egypt', 304],
+
+        ['DR Cong', 304],
+
+        ['Turkey', 304],
+
+        ['Germany', 304],
+
+        ['France', 304],
+
+        ['Tanzania', 304],
+
+        ['South Africa', 304],
+
+        ['Kenya', 304],
+
+        ['Spain', 304],
+
+        ['Uganda', 304],
+
+        ['Argentina', 304],
+
+        ['Sudan', 304],
+
+        ['Ukranine', 304],
+
+        ['Iraq', 304],
+
+        ['Afghanistan', 304],
+
+        ['Poland', 304],
+
+        ['Morocco', 304],
+
+        ['Saudi Arabia', 304],
+
+        ['Uzbekistan', 304],
+
+        ['Angola', 304],
+
+        ['Mozambique', 304],
+
+        ['Ghana', 304],
+
+        ['Yemen', 304],
+
+        ['Nepal', 304],
+
+        ['Venezuela', 304],
+
+        ['Madagascar', 304],
+
+        ['Cameroon', 304],
+
+        ['cote dlvoire', 304],
+
+        ['North Korea', 304],
+
+        ['Burkina Faso', 304],
+
+        ['Mali', 304],
+
+        ['Romania', 304],
+
+        ['Malawi', 304],
+
+        ['Chile', 304],
+
+        ['Kazakhstan', 304],
+
+        ['Zambia', 304],
+
+        ['Guatemala', 304],
+
+        ['Ecuador', 304],
+
+        ['Syria', 304],
+
+        ['Netherlands', 304],
+
+        ['Senegal', 304],
+
+        ['Chad', 304],
+
+        ['Smalia', 304],
+
+        ['Zimbawe', 304],
+
+        ['Guinea', 304],
+
+        ['Rwanda', 304],
+
+        ['Benin', 304],
+
+        ['Burundi', 304],
+
+        ['Tunsia', 304],
+
+        ['Bolivia', 2],
+
+        ['Belgium', 2],
+
+        ['Haiti', 2],
+
+        ['Cuba', 2],
+
+        ['South Sudan', 2],
+
+        ['Dominician Republic', 2],
+
+        ['Czech Republic', 2],
+
+        ['Greece', 2],
+
+        ['Jordan', 2],
+
+        ['Portugal', 2],
+
+        ['Azerbaijan', 2],
+
+        ['Sweden', 2],
+
+        ['Honduras', 2],
+
+        ['United Arab Emrites', 2],
+
+        ['Hungary', 2],
+
+        ['Tajikistan', 2],
+
+        ['Belarus', 2],
+
+        ['Austria', 2],
+
+        ['Papua New Guinea', 2],
+
+        ['Serbia', 2],
+
+        ['Israel', 2],
+
+        ['Switzerland', 2],
+
+        ['Togo', 2],
+
+        ['Sierra Leono', 2],
+
+        ['Laos', 2],
+
+        ['Paraguay', 2],
+
+        ['Bulgaria', 2],
+
+        ['Libya', 2],
+
+        ['Lebanon', 2],
+
+        ['Nicaragua', 2],
+
+        ['Kyrgyyzstan', 2],
+
+        ['EI salvador', 2],
+
+        ['Turkmenistan', 2],
+
+        ['Singapore', 2],
+
+        ['Denmark', 2],
+
+        ['Finland', 2],
+
+        ['Congo', 2],
+
+        ['Slovakia', 2],
+
+        ['Norway', 2],
+
+        ['Oman', 2],
+
+        ['State of Palestine', 2],
+
+        ['Costa Rica', 2],
+
+        ['Liberia', 2],
+
+        ['Ireland', 2],
+
+        ['Central African Republic', 2],
+
+        ['New Zealand', 2],
+
+        ['Mauritania', 2],
+
+        ['Panama', 2],
+
+        ['Kuwait', 2],
+
+        ['Croatia', 2],
+
+        ['Moldova', 2],
+
+        ['Georgia', 2],
+
+        ['Uruguay', 2],
+
+        ['Bosnia and Herzegovina', 2],
+
+        ['Mongolia', 2],
+
+        ['Armenia', 2],
+
+        ['Jamaica', 2],
+
+        ['Qatar', 2],
+
+        ['Albania', 2],
+
+        ['Lithuania', 2],
+
+        ['Namibia', 2],
+
+        ['Gambia', 2],
+
+        ['Botswana', 2],
+
+        ['Gabon', 2],
+
+        ['Lesotho', 2],
+
+        ['NorthMacedonia', 2],
+
+        ['Slovenia', 2],
+
+        ['GuineBissau', 2],
+
+        ['Latvia', 2],
+
+        ['Bahrain', 2],
+
+        ['EquatorialGuinea', 2],
+
+        ['Estonia', 2],
+
+        ['TimorLeste', 2],
+
+        ['Mauritius', 2],
+
+        ['Cyprus', 2],
+
+        ['Eswatini', 2],
+
+        ['Djibout', 2],
+
+        ['Fiji', 2],
+
+        ['Comoros', 2],
+
+        ['Guyana', 2],
+
+        ['Bhutan', 2],
+
+        ['SolomonIslands', 2],
+
+        ['Montenege', 2],
+
+        ['Luxembourg', 2],
+
+        ['Suriname', 2],
+
+        ['CaboVerde', 2],
+
+        ['Maldives', 2],
+
+        ['Malta', 2],
+
+        ['Brunei', 2],
+
+        ['Belize', 2],
+
+        ['Bahamas', 2],
+
+        ['Iceland', 2],
+
+        ['Vanuatu', 2],
+
+        ['Barbados', 2],
+
+        ['SaoTomeandPrincipe', 2],
+
+        ['Samoa', 2],
+
+        ['SaintLucia', 2],
+
+        ['Kiribati', 2],
+
+        ['Micronesia', 2],
+
+        ['Grenada', 2],
+
+        ['St.Vincent & Grenadines', 2],
+
+        ['Tonga', 2],
+
+        ['Seychelles', 2],
+
+        ['AntiguaandBarbuda', 2],
+
+        ['Andorra', 2],
+
+        ['Dominica', 2],
+
+        ['MarshallIslands', 2],
+
+        ['SaintKitts & Nevis', 2],
+
+        ['Monaco', 2],
+
+        ['Liechtenstein', 2],
+
+        ['SanMarino', 2],
+
+        ['Palau', 2],
+
+        ['Tuvalu', 2],
+
+        ['Nauru', 2],
+
+        ['HolySee', 2],
+
+        ['South Korea', 2],
+
+        ['Eritrea', 1],
+
+        ['Somalia', 1],
+
+        ['Sudan', 1],
+
+        ['Algeria', 1],
+
+        ['Ethiopia', 1],
+
+        ['Alaska', 1],
+
+        ['Equatorial Guinea', 1],
+
+        ['Guinea Bissau', 1],
+
+        ['Mauritus', 1],
+
+        ['Sri lanka', 1],
+
+        ['Vietnam', 1],
+
+        ['Western Sahara', 1],
+
+        ['Finland', 1],
+
+        ['Norway', 1],
+
+        ['Republic of Congo', 1],
+
+        ['Yeman', 1],
+
+        ['Colombia', 1],
+
+        ['Svalbard', 1],
+
+        ['Dominician Republic', 1]
+
+      ]);
+
+      var options =
+      {
+        colorAxis: { colors: ['red', 'red', 'green', 'red'] }
+
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+
+  <br>
+  <br>
+
+  <!--(Some Questions) Query From WHO-->
+
+  <h1 class="heading"> General Q & A</h1>
+
+  <section id="precaution">
+
+    <div class="card-deck">
+
+      <div class="card">
+
+        <img src="CSS/Images/giphy.gif" class="card-img-top" alt="gif">
+
+        <div class="card-body">
+
+          <h5 class="card-title">Can children or adolescents catch COVID-19</h5>
+
+          <p class="card-text">
+
+            Research indicates that children and adolescents are likely to become infected as any other age group and
+            can spread the disease.
+
+            Children and adults should follow the same guidance on self-quarantine and self-isolation if there is arisk
+            or have been exposed or are showing symptoms.
+
+            It is particularly important that children avoid contact with older people and it's best to stay home and
+            stay safe.
+
+          </p>
+
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-tips-for-health-and-safety-at-the-workplace-in-the-context-of-covid-19"
+            class="btn btn-primary">
+
+            Read More
+          </a>
+
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="CSS/Images/giphy.gif" class="card-img-top" alt="gif">
+
+        <div class="card-body">
+
+          <h5 class="card-title">
+
+            How long does the virus survive on surfaces
+
+          </h5>
+
+
+          <p class="card-text">
+            Coronavirus can easily be cleaned with common household disinfectants that will kill the virus.
+
+            Studies have shown that the virus can survive for up to 72 hours on plastic and stainless steel, less than 4
+
+            hours on copper and less than 24 hours on cardboard.
+
+            As, always clean your hands with an alcohol-based hand rub or wash them with soap and water and follow
+            social distancing.
+
+          </p>
+
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-tips-for-health-and-safety-at-the-workplace-in-the-context-of-covid-19"
+            class="btn btn-primary">
+
+            Read More
+          </a>
+
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        </div>
+
+
+      </div>
+
+      <div class="card">
+
+        <img src="CSS/Images/giphy.gif" class="card-img-top" alt="gif">
+
+        <div class="card-body">
+
+          <h5 class="card-title">what is Corona Virus</h5>
+
+          <p class="card-text">
+
+            Coronavirus causes a respiratory disease called COVID-19. Most cases (about eight out of ten) are mild.
+
+            The more serious cases can lead to severe lung damage Virus can also spread hand-to-hand and by contact.
+
+            Coronavirus is thought to spread mostly through close contact.
+
+            Scientists are studying how long the coronavirus can survive on various surfaces or whether there are
+            other ways
+
+            of spread.
+
+          </p>
+
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-tips-for-health-and-safety-at-the-workplace-in-the-context-of-covid-19"
+            class="btn btn-primary">
+
+            Read More
+          </a>
+
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+</body>
+
+</html>
